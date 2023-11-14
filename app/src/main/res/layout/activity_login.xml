@@ -11,9 +11,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#19A8A7"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/ImgLogo"
@@ -133,8 +137,62 @@
         android:id="@+id/imageView2"
         android:layout_width="72dp"
         android:layout_height="63dp"
-        app:srcCompat="@drawable/patinha"
-        tools:layout_editor_absoluteX="323dp"
-        tools:layout_editor_absoluteY="600dp" />
+        android:layout_marginStart="305dp"
+        android:layout_marginTop="556dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="112dp"
+        android:rotation="-30"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/patinhas"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="72dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="257dp"
+        android:layout_marginTop="619dp"
+        android:layout_marginEnd="82dp"
+        android:layout_marginBottom="49dp"
+        android:rotation="-30"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/patinhas"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="72dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="339dp"
+        android:layout_marginTop="619dp"
+        android:layout_marginBottom="49dp"
+        android:rotation="-30"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/patinhas"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="72dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="295dp"
+        android:layout_marginTop="675dp"
+        android:layout_marginEnd="44dp"
+        android:rotation="-30"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/patinhas"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
