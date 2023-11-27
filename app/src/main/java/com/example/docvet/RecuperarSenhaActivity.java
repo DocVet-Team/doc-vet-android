@@ -2,6 +2,7 @@ package com.example.docvet;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,7 +11,7 @@ import android.widget.Toast;
 
 public class RecuperarSenhaActivity extends AppCompatActivity {
 
-    private EditText edtSenha, edtConfSenha;
+    private EditText edtSenha, edtConfSenha, edtEmailrs;
     private Button btnCadastrar;
 
     @Override
@@ -30,6 +31,7 @@ public class RecuperarSenhaActivity extends AppCompatActivity {
     }
 
     private void initViews() {
+        edtEmailrs = findViewById(R.id.edtEmailrs);
         edtSenha = findViewById(R.id.edtSenha);
         edtConfSenha = findViewById(R.id.edtConfSenha);
         btnCadastrar = findViewById(R.id.btnCadastrar);
@@ -47,8 +49,9 @@ public class RecuperarSenhaActivity extends AppCompatActivity {
             // Simulação de ação após o cadastro (substitua com sua lógica real)
             Toast.makeText(this, "Recuperação de senha realizada com sucesso", Toast.LENGTH_SHORT).show();
 
-            // Navegue para a próxima tela ou realize outra ação conforme necessário
-            // Exemplo: startActivity(new Intent(this, ProximaActivity.class));
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+            finish();
         }
     }
 }
