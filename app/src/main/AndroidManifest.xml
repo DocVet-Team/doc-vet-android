@@ -19,10 +19,6 @@
             android:name=".CadastroActivity"
             android:exported="false" />
         <activity
-            android:name=".NavBarActivity"
-            android:exported="false"
-            android:label="@string/title_activity_nav_bar" />
-        <activity
             android:name=".LoadingActivity"
             android:exported="true">
             <intent-filter>
