@@ -13,6 +13,9 @@
         android:theme="@style/Theme.DocVet"
         tools:targetApi="31">
         <activity
+            android:name=".CadastroActivity"
+            android:exported="false" />
+        <activity
             android:name=".NavBarActivity"
             android:exported="false"
             android:label="@string/title_activity_nav_bar" />
@@ -25,10 +28,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".LoginActivity">
-        </activity>
-
+        <activity android:name=".LoginActivity"></activity>
     </application>
 
 </manifest>

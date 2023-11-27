@@ -34,6 +34,16 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+        txtvCriarConta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(LoginActivity.this, CadastroActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initViews() {
@@ -47,7 +57,7 @@ public class LoginActivity extends AppCompatActivity {
         txtvEsqSenha = findViewById(R.id.txtvEsqSenha);
         txtvCriarConta = findViewById(R.id.txtvCriarConta);
         edtEmail = findViewById(R.id.edtEmail);
-        edtSenha = findViewById(R.id.edtSenha);
+        edtSenha = findViewById(R.id.edtCpf);
         btnEntrar = findViewById(R.id.btnEntrar);
         btnDepois = findViewById(R.id.btnDepois);
     }

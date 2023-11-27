@@ -57,7 +57,7 @@
         app:layout_constraintEnd_toEndOf="@+id/btnDepois"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btnDepois"
-        app:layout_constraintTop_toBottomOf="@+id/edtSenha" />
+        app:layout_constraintTop_toBottomOf="@+id/edtCpf" />
 
     <Button
         android:id="@+id/btnDepois"
@@ -78,21 +78,23 @@
         android:id="@+id/edtEmail"
         android:layout_width="387dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/black"
+        android:background="@drawable/borda_redonda"
+        android:backgroundTint="@color/white"
         android:breakStrategy="high_quality"
         android:ems="10"
         android:hint="Email"
         android:inputType="textWebEmailAddress"
-        app:layout_constraintEnd_toEndOf="@+id/edtSenha"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/edtSenha"
+        app:layout_constraintEnd_toEndOf="@+id/edtCpf"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edtCpf"
         app:layout_constraintTop_toBottomOf="@+id/txtLogin" />
 
     <EditText
-        android:id="@+id/edtSenha"
+        android:id="@+id/edtCpf"
         android:layout_width="387dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
+        android:background="@drawable/borda_redonda"
         android:ems="10"
         android:hint="Senha"
         android:inputType="textPassword"
@@ -115,7 +117,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.944"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtSenha"
+        app:layout_constraintTop_toBottomOf="@+id/edtCpf"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
