@@ -15,7 +15,7 @@ public class CadastroActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
 
-        Button btnCadastrar = findViewById(R.id.btnEntrar);
+        Button btnCadastrar = findViewById(R.id.btnCadastrar);
         EditText edtEmail = findViewById(R.id.edtEmail);
         EditText edtCpf = findViewById(R.id.edtCpf);
         EditText edtTelefone = findViewById(R.id.edtTelefone);

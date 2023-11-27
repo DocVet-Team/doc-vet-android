@@ -47,9 +47,9 @@
         app:layout_constraintTop_toBottomOf="@+id/ImgLogo" />
 
     <Button
-        android:id="@+id/btnEntrar"
-        android:layout_width="387dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/btnCadastrar"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
         android:layout_marginTop="160dp"
         android:backgroundTint="#4BEDC6"
         android:text="Cadastrar"
@@ -61,8 +61,8 @@
 
     <EditText
         android:id="@+id/edtEmail"
-        android:layout_width="387dp"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
         android:background="@drawable/borda_redonda"
         android:backgroundTint="@color/white"
         android:breakStrategy="high_quality"
@@ -76,58 +76,120 @@
 
     <EditText
         android:id="@+id/edtCpf"
-        android:layout_width="387dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/borda_redonda"
         android:ems="10"
         android:hint="CPF"
         android:inputType="number"
-        app:layout_constraintEnd_toEndOf="@+id/btnEntrar"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/btnEntrar"
+        app:layout_constraintEnd_toEndOf="@+id/btnCadastrar"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/btnCadastrar"
         app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
 
     <EditText
         android:id="@+id/edtTelefone"
-        android:layout_width="387dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="64dp"
         android:background="@drawable/borda_redonda"
         android:ems="10"
         android:hint="Telefone"
         android:inputType="phone"
-        app:layout_constraintEnd_toEndOf="@+id/btnEntrar"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/btnEntrar"
+        app:layout_constraintEnd_toEndOf="@+id/btnCadastrar"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/btnCadastrar"
         app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
 
     <EditText
         android:id="@+id/edtSenha"
-        android:layout_width="387dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="116dp"
         android:background="@drawable/borda_redonda"
         android:ems="10"
         android:hint="Senha"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="@+id/btnEntrar"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/btnEntrar"
+        app:layout_constraintEnd_toEndOf="@+id/btnCadastrar"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/btnCadastrar"
         app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
 
     <EditText
         android:id="@+id/edtConfSenha"
-        android:layout_width="387dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="132dp"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="164dp"
         android:background="@drawable/borda_redonda"
         android:ems="10"
         android:hint="Confirmar Senha"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="@+id/btnEntrar"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/btnEntrar"
+        app:layout_constraintEnd_toEndOf="@+id/btnCadastrar"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/btnCadastrar"
         app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="72dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="305dp"
+        android:layout_marginTop="556dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="112dp"
+        android:rotation="-30"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/patinhas"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="72dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="257dp"
+        android:layout_marginTop="619dp"
+        android:layout_marginEnd="82dp"
+        android:layout_marginBottom="49dp"
+        android:rotation="-30"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/patinhas"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="72dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="339dp"
+        android:layout_marginTop="619dp"
+        android:layout_marginBottom="49dp"
+        android:rotation="-30"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/patinhas"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="72dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="295dp"
+        android:layout_marginTop="675dp"
+        android:layout_marginEnd="44dp"
+        android:rotation="-30"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/patinhas"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

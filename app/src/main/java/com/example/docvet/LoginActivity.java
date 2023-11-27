@@ -58,7 +58,7 @@ public class LoginActivity extends AppCompatActivity {
         txtvCriarConta = findViewById(R.id.txtvCriarConta);
         edtEmail = findViewById(R.id.edtEmail);
         edtSenha = findViewById(R.id.edtCpf);
-        btnEntrar = findViewById(R.id.btnEntrar);
+        btnEntrar = findViewById(R.id.btnCadastrar);
         btnDepois = findViewById(R.id.btnDepois);
     }
 
