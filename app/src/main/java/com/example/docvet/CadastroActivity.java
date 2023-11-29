@@ -89,6 +89,9 @@ public class CadastroActivity extends AppCompatActivity {
                         Toast.makeText(CadastroActivity.this, "Erro durante o cadastro: " + t.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
+                Intent intent = new Intent(this, LoginActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
     }
