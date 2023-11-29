@@ -27,10 +27,10 @@
         android:src="@drawable/docvet"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/txtLogin"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/txtLogin"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.158" />
+        app:layout_constraintVertical_bias="0.085" />
 
     <TextView
         android:id="@+id/txtLogin"
@@ -63,11 +63,27 @@
         android:id="@+id/edtEmail"
         android:layout_width="250dp"
         android:layout_height="40dp"
+        android:layout_marginTop="52dp"
         android:background="@drawable/borda_redonda"
         android:backgroundTint="@color/white"
         android:breakStrategy="high_quality"
         android:ems="10"
         android:hint="Email"
+        android:inputType="textWebEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/edtCpf"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edtCpf"
+        app:layout_constraintTop_toBottomOf="@+id/txtLogin" />
+
+    <EditText
+        android:id="@+id/edtNome"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:background="@drawable/borda_redonda"
+        android:backgroundTint="@color/white"
+        android:breakStrategy="high_quality"
+        android:ems="10"
+        android:hint="Nome"
         android:inputType="textWebEmailAddress"
         app:layout_constraintEnd_toEndOf="@+id/edtCpf"
         app:layout_constraintHorizontal_bias="0.5"
@@ -141,8 +157,10 @@
         android:rotation="-30"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/patinhas"
         tools:ignore="MissingConstraints" />
 
