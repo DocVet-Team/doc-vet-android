@@ -2,20 +2,19 @@ package com.example.docvet;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity {
 
     private View view;
     private ImageView imgLogo, imgPatinhas1, imgPatinhas2, imgPatinhas3, imgPatinhas4;
-    private TextView txtLogin, txtvEsqSenha, txtvCriarConta;
+    private TextView txtLogin, txtvEsqSenha, txtvCriarConta, txtvCriarConta2;
     private EditText edtEmail, edtSenha;
     private Button btnEntrar, btnDepois;
 
@@ -27,28 +26,45 @@ public class LoginActivity extends AppCompatActivity {
         // Inicializar elementos
         initViews();
 
-        btnDepois.setOnClickListener(new View.OnClickListener() {
+        btnEntrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Aqui você deve adicionar a lógica para verificar as credenciais e autenticar o usuário
+                // Por enquanto, vamos apenas iniciar a próxima atividade
                 Intent intent = new Intent(LoginActivity.this, VeterinariosActivity.class);
                 startActivity(intent);
             }
         });
 
-
         txtvCriarConta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intent = new Intent(LoginActivity.this, CadastroActivity.class);
                 startActivity(intent);
             }
         });
 
+        txtvCriarConta2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, CadastroVeterinario.class);
+                startActivity(intent);
+            }
+        });
+
+
         txtvEsqSenha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LoginActivity.this, RecuperarSenhaActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnDepois.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, VeterinariosActivity.class);
                 startActivity(intent);
             }
         });
@@ -64,10 +80,10 @@ public class LoginActivity extends AppCompatActivity {
         txtLogin = findViewById(R.id.txtLogin);
         txtvEsqSenha = findViewById(R.id.txtvEsqSenha);
         txtvCriarConta = findViewById(R.id.txtvCriarConta);
+        txtvCriarConta2 = findViewById(R.id.txtvCriarConta2);
         edtEmail = findViewById(R.id.edtEmail);
         edtSenha = findViewById(R.id.edtCpf);
         btnEntrar = findViewById(R.id.btnCadastrar);
         btnDepois = findViewById(R.id.btnDepois);
     }
-
 }
