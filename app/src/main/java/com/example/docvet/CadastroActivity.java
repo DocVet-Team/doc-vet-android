@@ -28,12 +28,12 @@ public class CadastroActivity extends AppCompatActivity {
         setContentView(R.layout.activity_cadastro);
 
         Button btnCadastrar = findViewById(R.id.btnCadastrar);
-        EditText edtNome = findViewById(R.id.edtNome);
-        EditText edtEmail = findViewById(R.id.edtEmail);
-        EditText edtCpf = findViewById(R.id.edtCpf);
-        EditText edtTelefone = findViewById(R.id.edtTelefone);
+        EditText edtNome = findViewById(R.id.edtNomePet);
+        EditText edtEmail = findViewById(R.id.edtRaca);
+        EditText edtCpf = findViewById(R.id.edtPeso);
+        EditText edtTelefone = findViewById(R.id.edtIdadePet);
         EditText edtSenha = findViewById(R.id.edtSenha);
-        EditText edtConfSenha = findViewById(R.id.edtConfSenha);
+        EditText edtConfSenha = findViewById(R.id.edtFotoPet);
 
         try {
             retrofit = new Retrofit.Builder()
@@ -76,7 +76,7 @@ public class CadastroActivity extends AppCompatActivity {
                     public void onResponse(Call<Void> call, Response<Void> response) {
                         if (response.isSuccessful()) {
                             Toast.makeText(CadastroActivity.this, "Cadastro realizado com sucesso", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(CadastroActivity.this, LoginActivity.class);
+                            Intent intent = new Intent(CadastroActivity.this, CadastroPet.class);
                             startActivity(intent);
                             finish();  // Aqui termina a atividade após o cadastro ser realizado com sucesso
                         } else {
@@ -89,7 +89,7 @@ public class CadastroActivity extends AppCompatActivity {
                         Toast.makeText(CadastroActivity.this, "Erro durante o cadastro: " + t.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
-                Intent intent = new Intent(this, LoginActivity.class);
+                Intent intent = new Intent(this, CadastroPet.class);
                 startActivity(intent);
                 finish();
             }

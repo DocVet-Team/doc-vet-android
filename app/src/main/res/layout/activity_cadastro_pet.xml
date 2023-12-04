@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CadastroVeterinario">
+    tools:context=".CadastroPet">
 
 
     <View
@@ -79,17 +79,6 @@
         app:srcCompat="@drawable/patinhas"
         tools:ignore="MissingConstraints" />
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="118dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="212dp"
-        android:layout_marginTop="427dp"
-        android:layout_marginEnd="81dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageView
         android:id="@+id/ImgLogo"
         android:layout_width="110dp"
@@ -104,13 +93,13 @@
         android:id="@+id/btnCadastrar"
         android:layout_width="240dp"
         android:layout_height="40dp"
-        android:layout_marginTop="623dp"
+        android:layout_marginTop="640dp"
         android:backgroundTint="#4BEDC6"
         android:text="Cadastrar"
         android:textColor="#000000"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -123,7 +112,7 @@
         android:backgroundTint="@color/white"
         android:breakStrategy="high_quality"
         android:ems="10"
-        android:hint="Email"
+        android:hint="Raça"
         android:inputType="textWebEmailAddress"
         app:layout_constraintEnd_toEndOf="@+id/edtPeso"
         app:layout_constraintStart_toStartOf="@+id/edtPeso"
@@ -136,7 +125,7 @@
         android:layout_marginTop="359dp"
         android:background="@drawable/borda_redonda"
         android:ems="10"
-        android:hint="Telefone"
+        android:hint="Idade"
         android:inputType="phone"
         app:layout_constraintEnd_toEndOf="@+id/btnCadastrar"
         app:layout_constraintStart_toStartOf="@+id/btnCadastrar"
@@ -149,7 +138,7 @@
         android:layout_marginTop="253dp"
         android:background="@drawable/borda_redonda"
         android:ems="10"
-        android:hint="CPF"
+        android:hint="Peso"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="@+id/edtTamanho"
         app:layout_constraintStart_toStartOf="@+id/edtTamanho"
@@ -162,7 +151,7 @@
         android:layout_marginTop="306dp"
         android:background="@drawable/borda_redonda"
         android:ems="10"
-        android:hint="CRM"
+        android:hint="Tamanho"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="@+id/edtIdadePet"
         app:layout_constraintStart_toStartOf="@+id/edtIdadePet"
@@ -189,7 +178,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="117dp"
         android:fontFamily="sans-serif"
-        android:text="Cadastre-se Como Veterinario"
+        android:text="Cadastrar Pet"
         android:textColor="#F4F0F0"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -198,56 +187,75 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/edtSenha"
-        android:layout_width="250dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="516dp"
-        android:background="@drawable/borda_redonda"
-        android:ems="10"
-        android:hint="Senha"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="@+id/edtFotoPet"
-        app:layout_constraintStart_toStartOf="@+id/edtFotoPet"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
         android:id="@+id/edtFotoPet"
         android:layout_width="250dp"
         android:layout_height="40dp"
-        android:layout_marginTop="566dp"
+        android:layout_marginTop="412dp"
         android:background="@drawable/borda_redonda"
         android:ems="10"
-        android:hint="Confirmar Senha"
+        android:hint="Foto (URL)"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="@+id/btnCadastrar"
         app:layout_constraintStart_toStartOf="@+id/btnCadastrar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkGrande"
+        android:layout_width="101dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="540dp"
+        android:layout_marginEnd="230dp"
+        android:text="Grande"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="409dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="468dp"
         android:layout_marginEnd="230dp"
-        android:text="Porte Atendido:"
+        android:text="Porte"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="121dp"
-        android:layout_height="18dp"
-        android:layout_marginStart="210dp"
-        android:layout_marginTop="409dp"
-        android:layout_marginEnd="80dp"
-        android:text="Especialidade"
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="468dp"
+        android:layout_marginEnd="70dp"
+        android:text="Sexo"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="468dp"
+        android:layout_marginEnd="10dp"
+        android:text="Castrado?"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -255,13 +263,74 @@
         android:id="@+id/checkPequeno"
         android:layout_width="101dp"
         android:layout_height="27dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="427dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="488dp"
         android:layout_marginEnd="230dp"
         android:text="Pequeno"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkM"
+        android:layout_width="101dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="488dp"
+        android:layout_marginEnd="120dp"
+        android:text="M"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkF"
+        android:layout_width="101dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="516dp"
+        android:layout_marginEnd="120dp"
+        android:text="F"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkSim"
+        android:layout_width="101dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="488dp"
+        android:layout_marginEnd="50dp"
+        android:text="Sim"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkNao"
+        android:layout_width="101dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="510dp"
+        android:layout_marginEnd="50dp"
+        android:text="Não"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -269,28 +338,38 @@
         android:id="@+id/checkMedio"
         android:layout_width="101dp"
         android:layout_height="27dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="455dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="516dp"
         android:layout_marginEnd="230dp"
         android:text="Medio"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <CheckBox
-        android:id="@+id/checkGrande"
-        android:layout_width="101dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="482dp"
-        android:layout_marginEnd="230dp"
-        android:text="Grande"
+    <TextView
+        android:id="@+id/textDepois"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Depois"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/btnCadastrar" />
+
+    <Spinner
+        android:id="@+id/tipoAnimalSpinner"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        android:foregroundTint="#FFFFFF"
+        android:spinnerMode="dialog"
+        tools:layout_editor_absoluteX="86dp"
+        tools:layout_editor_absoluteY="588dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

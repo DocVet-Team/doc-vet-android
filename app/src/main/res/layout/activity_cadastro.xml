@@ -42,8 +42,8 @@
         android:textColor="#F4F0F0"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/edtEmail"
-        app:layout_constraintStart_toStartOf="@+id/edtEmail"
+        app:layout_constraintEnd_toEndOf="@+id/edtRaca"
+        app:layout_constraintStart_toStartOf="@+id/edtRaca"
         app:layout_constraintTop_toBottomOf="@+id/ImgLogo" />
 
     <Button
@@ -57,10 +57,10 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtCpf" />
+        app:layout_constraintTop_toBottomOf="@+id/edtPeso" />
 
     <EditText
-        android:id="@+id/edtEmail"
+        android:id="@+id/edtRaca"
         android:layout_width="250dp"
         android:layout_height="40dp"
         android:layout_marginTop="52dp"
@@ -70,13 +70,13 @@
         android:ems="10"
         android:hint="Email"
         android:inputType="textWebEmailAddress"
-        app:layout_constraintEnd_toEndOf="@+id/edtCpf"
+        app:layout_constraintEnd_toEndOf="@+id/edtPeso"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edtCpf"
+        app:layout_constraintStart_toStartOf="@+id/edtPeso"
         app:layout_constraintTop_toBottomOf="@+id/txtLogin" />
 
     <EditText
-        android:id="@+id/edtNome"
+        android:id="@+id/edtNomePet"
         android:layout_width="250dp"
         android:layout_height="40dp"
         android:background="@drawable/borda_redonda"
@@ -85,13 +85,13 @@
         android:ems="10"
         android:hint="Nome"
         android:inputType="textWebEmailAddress"
-        app:layout_constraintEnd_toEndOf="@+id/edtCpf"
+        app:layout_constraintEnd_toEndOf="@+id/edtPeso"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/edtCpf"
+        app:layout_constraintStart_toStartOf="@+id/edtPeso"
         app:layout_constraintTop_toBottomOf="@+id/txtLogin" />
 
     <EditText
-        android:id="@+id/edtCpf"
+        android:id="@+id/edtPeso"
         android:layout_width="250dp"
         android:layout_height="40dp"
         android:layout_marginTop="12dp"
@@ -102,10 +102,10 @@
         app:layout_constraintEnd_toEndOf="@+id/btnCadastrar"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="@+id/btnCadastrar"
-        app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/edtRaca" />
 
     <EditText
-        android:id="@+id/edtTelefone"
+        android:id="@+id/edtIdadePet"
         android:layout_width="250dp"
         android:layout_height="40dp"
         android:layout_marginTop="64dp"
@@ -116,7 +116,7 @@
         app:layout_constraintEnd_toEndOf="@+id/btnCadastrar"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="@+id/btnCadastrar"
-        app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/edtRaca" />
 
     <EditText
         android:id="@+id/edtSenha"
@@ -130,10 +130,10 @@
         app:layout_constraintEnd_toEndOf="@+id/btnCadastrar"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="@+id/btnCadastrar"
-        app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/edtRaca" />
 
     <EditText
-        android:id="@+id/edtConfSenha"
+        android:id="@+id/edtFotoPet"
         android:layout_width="250dp"
         android:layout_height="40dp"
         android:layout_marginTop="164dp"
@@ -144,7 +144,7 @@
         app:layout_constraintEnd_toEndOf="@+id/btnCadastrar"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="@+id/btnCadastrar"
-        app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/edtRaca" />
 
     <ImageView
         android:id="@+id/imageView2"

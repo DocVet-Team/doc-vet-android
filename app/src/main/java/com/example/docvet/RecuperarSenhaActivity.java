@@ -33,7 +33,7 @@ public class RecuperarSenhaActivity extends AppCompatActivity {
     private void initViews() {
         edtEmailrs = findViewById(R.id.edtEmailrs);
         edtSenha = findViewById(R.id.edtSenha);
-        edtConfSenha = findViewById(R.id.edtConfSenha);
+        edtConfSenha = findViewById(R.id.edtFotoPet);
         btnCadastrar = findViewById(R.id.btnCadastrar);
     }
 

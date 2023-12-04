@@ -61,7 +61,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtConfSenha" />
+        app:layout_constraintTop_toBottomOf="@+id/edtFotoPet" />
 
     <EditText
         android:id="@+id/edtSenha"
@@ -92,7 +92,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtLogin" />
 
     <EditText
-        android:id="@+id/edtConfSenha"
+        android:id="@+id/edtFotoPet"
         android:layout_width="240dp"
         android:layout_height="40dp"
         android:layout_marginTop="28dp"
