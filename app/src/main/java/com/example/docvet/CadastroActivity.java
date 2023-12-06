@@ -58,6 +58,8 @@ public class CadastroActivity extends AppCompatActivity {
             if (TextUtils.isEmpty(email) || TextUtils.isEmpty(cpf) || TextUtils.isEmpty(telefone)
                     || TextUtils.isEmpty(senha) || TextUtils.isEmpty(confSenha)) {
                 Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_SHORT).show();
+            } else if (!isValidEmail(email)) {
+                Toast.makeText(this, "E-mail inválido. Por favor, insira um e-mail válido.", Toast.LENGTH_SHORT).show();
             } else if (!senha.equals(confSenha)) {
                 Toast.makeText(this, "As senhas não coincidem", Toast.LENGTH_SHORT).show();
             } else {
@@ -97,5 +99,10 @@ public class CadastroActivity extends AppCompatActivity {
                 });
             }
         });
+    }
+
+    // Função para validar e-mail
+    private boolean isValidEmail(CharSequence target) {
+        return !TextUtils.isEmpty(target) && android.util.Patterns.EMAIL_ADDRESS.matcher(target).matches();
     }
 }

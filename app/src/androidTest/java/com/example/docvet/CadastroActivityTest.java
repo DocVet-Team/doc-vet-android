@@ -7,7 +7,6 @@ import androidx.test.espresso.matcher.ViewMatchers;
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -40,6 +39,7 @@ public class CadastroActivityTest {
         // Clique no botão de cadastrar
         Espresso.onView(ViewMatchers.withId(R.id.btnCadastrarDonoDePet)).perform(ViewActions.click());
     }
+
     @Test
     public void testCadastroActivityWithValidPasswords() {
         // Teste para senhas válidas
@@ -52,7 +52,6 @@ public class CadastroActivityTest {
 
         // Clique no botão de cadastrar
         Espresso.onView(ViewMatchers.withId(R.id.btnCadastrarDonoDePet)).perform(ViewActions.click());
-
     }
 
     @Test
@@ -68,5 +67,24 @@ public class CadastroActivityTest {
         // Clique no botão de cadastrar
         Espresso.onView(ViewMatchers.withId(R.id.btnCadastrarDonoDePet)).perform(ViewActions.click());
     }
-}
 
+    @Test
+    public void testValidEmail() {
+        // Teste para e-mail válido
+        Espresso.onView(ViewMatchers.withId(R.id.edtEmailDonoPet)).perform(ViewActions.typeText("teste@example.com"));
+        Espresso.onView(ViewMatchers.withId(R.id.btnCadastrarDonoDePet)).perform(ViewActions.click());
+
+        // Clique no botão de cadastrar
+        Espresso.onView(ViewMatchers.withId(R.id.btnCadastrarDonoDePet)).perform(ViewActions.click());
+    }
+
+    @Test
+    public void testInvalidEmail() {
+        // Teste para e-mail inválido
+        Espresso.onView(ViewMatchers.withId(R.id.edtEmailDonoPet)).perform(ViewActions.typeText("email_invalido"));
+        Espresso.onView(ViewMatchers.withId(R.id.btnCadastrarDonoDePet)).perform(ViewActions.click());
+
+        // Clique no botão de cadastrar
+        Espresso.onView(ViewMatchers.withId(R.id.btnCadastrarDonoDePet)).perform(ViewActions.click());
+    }
+}
