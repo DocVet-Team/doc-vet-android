@@ -22,9 +22,6 @@
             android:name=".CadastroVeterinario"
             android:exported="false" />
         <activity
-            android:name=".activity_cadastroVeterinario"
-            android:exported="false" />
-        <activity
             android:name=".VeterinariosActivity"
             android:exported="false" />
         <activity

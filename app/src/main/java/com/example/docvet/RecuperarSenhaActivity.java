@@ -12,7 +12,7 @@ import android.widget.Toast;
 public class RecuperarSenhaActivity extends AppCompatActivity {
 
     private EditText edtSenha, edtConfSenha, edtEmailrs;
-    private Button btnCadastrar;
+    private Button btnSalvarNovaSenha;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +22,7 @@ public class RecuperarSenhaActivity extends AppCompatActivity {
         // Inicializar elementos
         initViews();
 
-        btnCadastrar.setOnClickListener(new View.OnClickListener() {
+        btnSalvarNovaSenha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 validarCadastro();
@@ -31,10 +31,10 @@ public class RecuperarSenhaActivity extends AppCompatActivity {
     }
 
     private void initViews() {
-        edtEmailrs = findViewById(R.id.edtEmailrs);
-        edtSenha = findViewById(R.id.edtSenha);
-        edtConfSenha = findViewById(R.id.edtFotoPet);
-        btnCadastrar = findViewById(R.id.btnCadastrar);
+        edtEmailrs = findViewById(R.id.edtEmailDonoPet);
+        edtSenha = findViewById(R.id.edtSenhaDonoPet);
+        edtConfSenha = findViewById(R.id.edtConfSenhaDonoPet);
+        btnSalvarNovaSenha = findViewById(R.id.btnSalvarNovaSenha);
     }
 
     private void validarCadastro() {
@@ -46,7 +46,7 @@ public class RecuperarSenhaActivity extends AppCompatActivity {
         } else if (!senha.equals(confSenha)) {
             Toast.makeText(this, "As senhas não coincidem", Toast.LENGTH_SHORT).show();
         } else {
-            // Simulação de ação após o cadastro (substitua com sua lógica real)
+
             Toast.makeText(this, "Recuperação de senha realizada com sucesso", Toast.LENGTH_SHORT).show();
 
             Intent intent = new Intent(this, LoginActivity.class);

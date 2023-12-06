@@ -27,13 +27,13 @@ public class CadastroActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
 
-        Button btnCadastrar = findViewById(R.id.btnCadastrar);
-        EditText edtNome = findViewById(R.id.edtNomePet);
-        EditText edtEmail = findViewById(R.id.edtRaca);
-        EditText edtCpf = findViewById(R.id.edtPeso);
-        EditText edtTelefone = findViewById(R.id.edtIdadePet);
-        EditText edtSenha = findViewById(R.id.edtSenha);
-        EditText edtConfSenha = findViewById(R.id.edtFotoPet);
+        Button btnCadastrar = findViewById(R.id.btnCadastrarDonoDePet);
+        EditText edtNome = findViewById(R.id.edtNomeDonoPet);
+        EditText edtEmail = findViewById(R.id.edtEmailDonoPet);
+        EditText edtCpf = findViewById(R.id.edtCpfDonoPet);
+        EditText edtTelefone = findViewById(R.id.edtTelefoneDonoPet);
+        EditText edtSenha = findViewById(R.id.edtSenhaDonoPet);
+        EditText edtConfSenha = findViewById(R.id.edtConfSenhaDonoPet);
 
         try {
             retrofit = new Retrofit.Builder()

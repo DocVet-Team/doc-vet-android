@@ -47,4 +47,29 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <!-- View -->
+    <item name="view" type="id">@+id/view</item>
+
+    <!-- ImageView -->
+    <item name="ImgLogo" type="id">@+id/ImgLogo</item>
+
+    <!-- TextView -->
+    <item name="txtLogin" type="id">@+id/txtLogin</item>
+
+    <!-- Button -->
+    <item name="btnCadastrarDonoDePet" type="id">@+id/btnCadastrarDonoDePet</item>
+
+    <!-- EditText -->
+    <item name="edtEmailDonoPet" type="id">@+id/edtEmailDonoPet</item>
+    <item name="edtNomeDonoPet" type="id">@+id/edtNomeDonoPet</item>
+    <item name="edtCpfDonoPet" type="id">@+id/edtCpfDonoPet</item>
+    <item name="edtTelefoneDonoPet" type="id">@+id/edtTelefoneDonoPet</item>
+    <item name="edtSenhaDonoPet" type="id">@+id/edtSenhaDonoPet</item>
+    <item name="edtConfSenhaDonoPet" type="id">@+id/edtConfSenhaDonoPet</item>
+
+    <!-- ImageView (patinhas) -->
+    <item name="imageView2" type="id">@+id/imageView2</item>
+    <item name="imageView3" type="id">@+id/imageView3</item>
+    <item name="imageView4" type="id">@+id/imageView4</item>
+    <item name="imageView" type="id">@+id/imageView</item>
 </resources>

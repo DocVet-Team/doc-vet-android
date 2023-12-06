@@ -2,6 +2,7 @@ package com.example.docvet;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -29,8 +30,7 @@ public class LoginActivity extends AppCompatActivity {
         btnEntrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Aqui você deve adicionar a lógica para verificar as credenciais e autenticar o usuário
-                // Por enquanto, vamos apenas iniciar a próxima atividade
+
                 Intent intent = new Intent(LoginActivity.this, VeterinariosActivity.class);
                 startActivity(intent);
             }
@@ -79,11 +79,12 @@ public class LoginActivity extends AppCompatActivity {
         imgPatinhas4 = findViewById(R.id.imageView4);
         txtLogin = findViewById(R.id.txtLogin);
         txtvEsqSenha = findViewById(R.id.txtvEsqSenha);
+        Log.e("guilherme",txtvEsqSenha.getText().toString());
         txtvCriarConta = findViewById(R.id.txtvCriarConta);
         txtvCriarConta2 = findViewById(R.id.txtvCriarConta2);
-        edtEmail = findViewById(R.id.edtRaca);
-        edtSenha = findViewById(R.id.edtPeso);
-        btnEntrar = findViewById(R.id.btnCadastrar);
+        edtEmail = findViewById(R.id.edtEmailDonoPet);
+        edtSenha = findViewById(R.id.edtCpfDonoPet);
+        btnEntrar = findViewById(R.id.btnEntrar);
         btnDepois = findViewById(R.id.btnDepois);
     }
 }
