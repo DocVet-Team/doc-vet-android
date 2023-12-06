@@ -29,8 +29,8 @@ public class CadastroActivityTest {
         Espresso.onView(ViewMatchers.withId(R.id.btnCadastrarDonoDePet)).check(ViewAssertions.matches(ViewMatchers.isDisplayed()));
 
         // Preencha os campos com dados de teste
-        Espresso.onView(ViewMatchers.withId(R.id.edtNomeDonoPet)).perform(ViewActions.typeText("Teste Nome"));
-        Espresso.onView(ViewMatchers.withId(R.id.edtEmailDonoPet)).perform(ViewActions.typeText("teste@example.com"));
+        Espresso.onView(ViewMatchers.withId(R.id.edtNomeDonoPet)).perform(ViewActions.typeText("Guilherme"));
+        Espresso.onView(ViewMatchers.withId(R.id.edtEmailDonoPet)).perform(ViewActions.typeText("teste@teste.com"));
         Espresso.onView(ViewMatchers.withId(R.id.edtCpfDonoPet)).perform(ViewActions.typeText("12345678901"));
         Espresso.onView(ViewMatchers.withId(R.id.edtTelefoneDonoPet)).perform(ViewActions.typeText("123456789"));
         Espresso.onView(ViewMatchers.withId(R.id.edtSenhaDonoPet)).perform(ViewActions.typeText("senha123"));
@@ -41,10 +41,10 @@ public class CadastroActivityTest {
     }
 
     @Test
-    public void testCadastroActivityWithValidPasswords() {
+    public void testCadastroActivitySenhaValida() {
         // Teste para senhas válidas
-        Espresso.onView(ViewMatchers.withId(R.id.edtNomeDonoPet)).perform(ViewActions.typeText("Teste Nome"));
-        Espresso.onView(ViewMatchers.withId(R.id.edtEmailDonoPet)).perform(ViewActions.typeText("teste@example.com"));
+        Espresso.onView(ViewMatchers.withId(R.id.edtNomeDonoPet)).perform(ViewActions.typeText("Guilherme"));
+        Espresso.onView(ViewMatchers.withId(R.id.edtEmailDonoPet)).perform(ViewActions.typeText("teste@teste.com"));
         Espresso.onView(ViewMatchers.withId(R.id.edtCpfDonoPet)).perform(ViewActions.typeText("12345678901"));
         Espresso.onView(ViewMatchers.withId(R.id.edtTelefoneDonoPet)).perform(ViewActions.typeText("123456789"));
         Espresso.onView(ViewMatchers.withId(R.id.edtSenhaDonoPet)).perform(ViewActions.typeText("senha123"));
@@ -55,10 +55,10 @@ public class CadastroActivityTest {
     }
 
     @Test
-    public void testCadastroActivityWithDifferentPasswords() {
+    public void testCadastroActivitySenhaInvalida() {
         // Teste para senhas diferentes
-        Espresso.onView(ViewMatchers.withId(R.id.edtNomeDonoPet)).perform(ViewActions.typeText("Teste Nome"));
-        Espresso.onView(ViewMatchers.withId(R.id.edtEmailDonoPet)).perform(ViewActions.typeText("teste@example.com"));
+        Espresso.onView(ViewMatchers.withId(R.id.edtNomeDonoPet)).perform(ViewActions.typeText("Guilherme"));
+        Espresso.onView(ViewMatchers.withId(R.id.edtEmailDonoPet)).perform(ViewActions.typeText("teste@teste.com"));
         Espresso.onView(ViewMatchers.withId(R.id.edtCpfDonoPet)).perform(ViewActions.typeText("12345678901"));
         Espresso.onView(ViewMatchers.withId(R.id.edtTelefoneDonoPet)).perform(ViewActions.typeText("123456789"));
         Espresso.onView(ViewMatchers.withId(R.id.edtSenhaDonoPet)).perform(ViewActions.typeText("senha123"));
@@ -69,9 +69,9 @@ public class CadastroActivityTest {
     }
 
     @Test
-    public void testValidEmail() {
+    public void testEmailValido() {
         // Teste para e-mail válido
-        Espresso.onView(ViewMatchers.withId(R.id.edtEmailDonoPet)).perform(ViewActions.typeText("teste@example.com"));
+        Espresso.onView(ViewMatchers.withId(R.id.edtEmailDonoPet)).perform(ViewActions.typeText("teste@teste.com"));
         Espresso.onView(ViewMatchers.withId(R.id.btnCadastrarDonoDePet)).perform(ViewActions.click());
 
         // Clique no botão de cadastrar
@@ -79,7 +79,7 @@ public class CadastroActivityTest {
     }
 
     @Test
-    public void testInvalidEmail() {
+    public void testEmailInvalido() {
         // Teste para e-mail inválido
         Espresso.onView(ViewMatchers.withId(R.id.edtEmailDonoPet)).perform(ViewActions.typeText("email_invalido"));
         Espresso.onView(ViewMatchers.withId(R.id.btnCadastrarDonoDePet)).perform(ViewActions.click());
