@@ -2,6 +2,7 @@ package com.example.docvet;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -54,20 +55,22 @@ public class CadastroActivity extends AppCompatActivity {
             String senha = edtSenha.getText().toString();
             String confSenha = edtConfSenha.getText().toString();
 
-            if (email.isEmpty() || cpf.isEmpty() || telefone.isEmpty() || senha.isEmpty() || confSenha.isEmpty()) {
+            if (TextUtils.isEmpty(email) || TextUtils.isEmpty(cpf) || TextUtils.isEmpty(telefone)
+                    || TextUtils.isEmpty(senha) || TextUtils.isEmpty(confSenha)) {
                 Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_SHORT).show();
             } else if (!senha.equals(confSenha)) {
                 Toast.makeText(this, "As senhas não coincidem", Toast.LENGTH_SHORT).show();
             } else {
+                // Cadastro realizado com sucesso
                 Toast.makeText(this, "Cadastro realizado com sucesso", Toast.LENGTH_SHORT).show();
 
                 Pessoa pessoa = new Pessoa(
                         edtNome.getText().toString(),
-                        edtEmail.getText().toString(),
-                        edtCpf.getText().toString(),
-                        edtTelefone.getText().toString(),
-                        edtSenha.getText().toString(),
-                        edtConfSenha.getText().toString());
+                        email,
+                        cpf,
+                        telefone,
+                        senha,
+                        confSenha);
 
                 Call<Void> call = service.cadastrarUsuario(pessoa);
 
@@ -75,23 +78,23 @@ public class CadastroActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<Void> call, Response<Void> response) {
                         if (response.isSuccessful()) {
+                            // Sucesso na chamada à API
                             Toast.makeText(CadastroActivity.this, "Cadastro realizado com sucesso", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(CadastroActivity.this, CadastroPet.class);
                             startActivity(intent);
                             finish();  // Aqui termina a atividade após o cadastro ser realizado com sucesso
                         } else {
-                            Toast.makeText(CadastroActivity.this, "Erro durante o cadastro", Toast.LENGTH_SHORT).show();
+                            // Falha na chamada à API
+                            Toast.makeText(CadastroActivity.this, "Erro ao cadastrar. Por favor, tente novamente.", Toast.LENGTH_SHORT).show();
                         }
                     }
 
                     @Override
                     public void onFailure(Call<Void> call, Throwable t) {
-                        Toast.makeText(CadastroActivity.this, "Erro durante o cadastro: " + t.getMessage(), Toast.LENGTH_SHORT).show();
+                        // Erro durante a chamada à API
+                        Toast.makeText(CadastroActivity.this, "Erro ao cadastrar: " + t.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
-                Intent intent = new Intent(this, CadastroPet.class);
-                startActivity(intent);
-                finish();
             }
         });
     }
