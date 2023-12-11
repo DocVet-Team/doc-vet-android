@@ -9,8 +9,13 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.docvet.model.DonoPet;
 import com.example.docvet.model.Pessoa;
+import com.example.docvet.services.DonoPetService;
 import com.example.docvet.services.PessoaService;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -21,7 +26,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class CadastroActivity extends AppCompatActivity {
 
     private Retrofit retrofit;
-    private PessoaService service;
+    private DonoPetService service;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,10 +43,10 @@ public class CadastroActivity extends AppCompatActivity {
 
         try {
             retrofit = new Retrofit.Builder()
-                    .baseUrl("http://192.168.56.1:8080/pessoa/") // ipv4 do pc
+                    .baseUrl("http://192.168.56.1:8080/api/v1/dono-pets/") // ipv4 do pc
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
-            service = retrofit.create(PessoaService.class);
+            service = retrofit.create(DonoPetService.class);
         } catch (Exception e) {
             e.printStackTrace();
             Toast.makeText(this, "Erro de comunicação: Verifique sua conexão com a Internet", Toast.LENGTH_SHORT).show();
@@ -66,15 +71,19 @@ public class CadastroActivity extends AppCompatActivity {
                 // Cadastro realizado com sucesso
                 Toast.makeText(this, "Cadastro realizado com sucesso", Toast.LENGTH_SHORT).show();
 
-                Pessoa pessoa = new Pessoa(
+                List<String> telefones = new ArrayList<String>();
+
+                telefones.add(telefone);
+
+                DonoPet donoPet = new DonoPet(
                         edtNome.getText().toString(),
                         email,
                         cpf,
                         telefone,
                         senha,
-                        confSenha);
+                        telefones);
 
-                Call<Void> call = service.cadastrarUsuario(pessoa);
+                Call<Void> call = service.cadastrarDonoPet(donoPet);
 
                 call.enqueue(new Callback<Void>() {
                     @Override

@@ -62,7 +62,7 @@
         app:layout_constraintTop_toBottomOf="@+id/edtConfSenhaDonoPet" />
 
     <EditText
-        android:id="@+id/edtEmailDonoPet"
+        android:id="@+id/edtNovaSenhaEmail"
         android:layout_width="240dp"
         android:layout_height="40dp"
         android:layout_marginStart="85dp"
@@ -77,7 +77,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/edtSenhaDonoPet"
+        android:id="@+id/edtNovaSenhaSenha"
         android:layout_width="240dp"
         android:layout_height="40dp"
         android:layout_marginStart="85dp"

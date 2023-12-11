@@ -23,12 +23,12 @@ public class CadastroPet extends AppCompatActivity implements View.OnClickListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro_pet);
 
-        nome.findViewById(R.id.edtNomeDonoPet);
-        raca.findViewById(R.id.edtEmailDonoPet);
-        peso.findViewById(R.id.edtCpfDonoPet);
+        nome.findViewById(R.id.edtNomePet);
+        raca.findViewById(R.id.edtRacaPet);
+        peso.findViewById(R.id.edtPesoPet);
         tamanho.findViewById(R.id.edtTamanhoPet);
-        idade.findViewById(R.id.edtTelefoneDonoPet);
-        foto.findViewById(R.id.edtConfSenhaDonoPet);
+        idade.findViewById(R.id.edtIdadePet);
+        foto.findViewById(R.id.edtFotoPet);
 
         tipoAnimal.findViewById(R.id.tipoAnimalSpinner);
 
@@ -40,7 +40,7 @@ public class CadastroPet extends AppCompatActivity implements View.OnClickListen
         castradoSim.findViewById(R.id.checkSim);
         castradoNao.findViewById(R.id.checkNao);
 
-        btnCadastrar.findViewById(R.id.btnCadastrarDonoDePet);
+        btnCadastrar.findViewById(R.id.btnCadastrarPet);
         btnCadastrar.setOnClickListener(this);
 
         edtDepois.findViewById(R.id.btnDepois);

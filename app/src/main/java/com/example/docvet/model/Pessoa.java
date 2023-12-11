@@ -1,19 +1,15 @@
 package com.example.docvet.model;
 
-public class Pessoa {
+import java.io.Serializable;
+
+public class Pessoa implements Serializable {
 
     private Integer id;
-
     private String nome;
-
     private String cpf;
-
     private String email;
-
     private String senha;
-
     private String confSenha;
-
     private String telefone;
 
     public Pessoa(String nome, String email, String cpf, String telefone, String senha, String confSenha) {
