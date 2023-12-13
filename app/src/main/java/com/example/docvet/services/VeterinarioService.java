@@ -15,10 +15,6 @@ import retrofit2.http.POST;
 
 public interface VeterinarioService {
 
-//    @Headers("Accept: /api/v1/veterinarios")
-//    @POST("/")
-//    Call<Veterinario> postVeterinario(@Body Veterinario veterinario);
-
     @GET("/api/v1/veterinarios/")
     Call<List<Veterinario>> getVeterinarios();
 

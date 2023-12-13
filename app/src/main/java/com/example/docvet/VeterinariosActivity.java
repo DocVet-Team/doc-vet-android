@@ -47,8 +47,8 @@ public class VeterinariosActivity extends AppCompatActivity {
 
     private void initViews() {
         logoVet = findViewById(R.id.logoVet);
-        filtrosVet = findViewById(R.id.filtrosVet);
-        edtPesquisar = findViewById(R.id.edtPesquisar);
+//        filtrosVet = findViewById(R.id.filtrosVet);
+//        edtPesquisar = findViewById(R.id.edtPesquisar);
         listVeterinarios = findViewById(R.id.listVeterinarios);
 
         retrofit = new Retrofit.Builder()
@@ -67,11 +67,10 @@ public class VeterinariosActivity extends AppCompatActivity {
                 if (response.isSuccessful()){
                     List<Veterinario> vetLista = response.body();
 
+                    Log.e("karol", vetLista.toString());
+
                     listaVetCustom listaCustom = new listaVetCustom(context, vetLista);
                     listVeterinarios.setAdapter(listaCustom);
-
-//                    ListAdapter listAdapter = new ArrayAdapter<Veterinario>(context, android.R.layout.simple_list_item_1, vetLista);
-//                    listVeterinarios.setAdapter(listAdapter);
                 }
             }
 

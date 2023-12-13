@@ -11,7 +11,35 @@ public class Veterinario implements Serializable {
     private String foto;
     private String senha;
     List<String> telefones;
+
+    List<Especialidades> especialidades;
+
+    private String descricao;
     private String crmv;
+
+//    private List<Endereco> enderecos;
+
+    public Veterinario(String nome, String cpf, String email, String senha, String crmv, List<String> telefones, String descricao) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.email = email;
+        this.senha = senha;
+        this.telefones = telefones;
+        this.crmv = crmv;
+        this.descricao = descricao;
+    }
+
+    public Veterinario(String nome, String cpf, String email, String foto, String senha, List<String> telefones, List<Especialidades> especialidades, String descricao, String crmv) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.email = email;
+        this.foto = foto;
+        this.senha = senha;
+        this.telefones = telefones;
+        this.especialidades = especialidades;
+        this.descricao = descricao;
+        this.crmv = crmv;
+    }
 
     public Veterinario(String nome, String cpf, String email, String senha, String crmv, List<String> telefones) {
         this.nome = nome;
@@ -21,6 +49,19 @@ public class Veterinario implements Serializable {
         this.telefones = telefones;
         this.crmv = crmv;
     }
+
+//    public Veterinario(String nome, String cpf, String email, String foto, String senha, List<String> telefones, List<Especialidades> especialidades, String descricao, String crmv, List<Endereco> enderecos) {
+//        this.nome = nome;
+//        this.cpf = cpf;
+//        this.email = email;
+//        this.foto = foto;
+//        this.senha = senha;
+//        this.telefones = telefones;
+//        this.especialidades = especialidades;
+//        this.descricao = descricao;
+//        this.crmv = crmv;
+//        this.enderecos = enderecos;
+//    }
 
     public Veterinario(String nome, String crmv){
         this.nome = nome;
@@ -82,6 +123,30 @@ public class Veterinario implements Serializable {
     public void setCrmv(String crmv) {
         this.crmv = crmv;
     }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public List<Especialidades> getEspecialidades() {
+        return especialidades;
+    }
+
+    public void setEspecialidades(List<Especialidades> especialidades) {
+        this.especialidades = especialidades;
+    }
+
+//    public List<Endereco> getEnderecos() {
+//        return enderecos;
+//    }
+//
+//    public void setEnderecos(List<Endereco> enderecos) {
+//        this.enderecos = enderecos;
+//    }
 
     @Override
     public String toString() {
